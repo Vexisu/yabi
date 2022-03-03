@@ -1,4 +1,4 @@
-package dev.vexisu.yabi.controller;
+package dev.vexisu.yabi.controller.post;
 
 import dev.vexisu.yabi.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
-public class ViewController
+public class ViewPostController
 {
 	private PostService postService;
 
 	@Autowired
-	public ViewController(PostService postService)
+	public ViewPostController(PostService postService)
 	{
 		this.postService = postService;
 	}
 
-	@GetMapping("/view/{id}")
-	public void view(@PathVariable Integer id){
-
+	@GetMapping("/post/view/{id}")
+	public String view(@PathVariable Integer id){
+		return "post/view";
 	}
 }
