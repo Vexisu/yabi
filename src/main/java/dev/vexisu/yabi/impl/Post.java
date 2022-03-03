@@ -1,8 +1,11 @@
 package dev.vexisu.yabi.impl;
 
+import java.util.Date;
 import java.util.Objects;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -15,13 +18,17 @@ import org.hibernate.Hibernate;
 @ToString
 @RequiredArgsConstructor
 @Entity
-public class User
+public class Post
 {
 	@Id
+	@GeneratedValue
+	private Integer id;
 	@NotNull
-	private String username;
-	@NotNull
-	private String hashedPassword;
+	private String title;
+	private String content;
+	private Date creationDate;
+	@ManyToOne
+	private User author;
 
 	@Override
 	public boolean equals(Object o)
@@ -34,8 +41,8 @@ public class User
 		{
 			return false;
 		}
-		User user = (User) o;
-		return username != null && Objects.equals(username, user.username);
+		Post post = (Post) o;
+		return id != null && Objects.equals(id, post.id);
 	}
 
 	@Override
