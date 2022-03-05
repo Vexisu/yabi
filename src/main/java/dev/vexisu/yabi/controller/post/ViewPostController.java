@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class ViewPostController
 {
-	private PostService postService;
+	private final PostService postService;
 
 	@Autowired
 	public ViewPostController(PostService postService)
