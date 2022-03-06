@@ -2,3 +2,7 @@ yabi:
   personalization:
     title: "My fresh blog"
     description: "Powered by Yabi."
+
+spring:
+  profiles:
+    active: development

@@ -8,9 +8,8 @@
 	</head>
 	<body>
 		<main>
-			<div th:replace="fragment/menubarFragment :: menubar"></div>
-			<div class="yaff segment">
-				<article th:replace="fragment/postFragment :: post(${post})"></article>
+			<div th:fragment="menubar" class="yaff menu-bar">
+				<a class="yaff simple-button" th:href="@{/}">Home page</a>
 			</div>
 		</main>
 	</body>
