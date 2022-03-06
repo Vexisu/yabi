@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" th:href="@{/res/yaff/yaff.css}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Title</title>
+		<title th:text="${@personalizationProperties.getTitle()}"></title>
 	</head>
 	<body>
 		<main>
