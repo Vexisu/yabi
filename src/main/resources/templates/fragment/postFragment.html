@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" th:href="@{/res/yaff/yaff.css}">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Title</title>
-	</head>
-	<body>
-		<main>
-			<!--/*@thymesVar id="post" type="dev.vexisu.yabi.impl.Post"*/-->
-			<article th:fragment="post(post)" class="yaff article">
-				<h3 th:text="${post.title}"></h3>
-				<p th:text="'Author: ' + ${post.author.username}"></p>
-				<p th:text="${post.content}"></p>
-			</article>
-		</main>
-	</body>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{/res/yaff/yaff.css}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Title</title>
+</head>
+
+<body>
+	<main>
+		<article th:fragment="post(post)" class="yaff article">
+			<h3 th:text="${post.title}"></h3>
+			<p th:text="'Author: ' + ${post.author.username}"></p>
+			<p th:text="${post.content}"></p>
+		</article>
+	</main>
+</body>
+
 </html>

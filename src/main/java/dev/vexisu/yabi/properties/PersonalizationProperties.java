@@ -7,8 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Data
 @Configuration()
 @ConfigurationProperties("yabi.personalization")
-public class PersonalizationProperties
-{
+public class PersonalizationProperties {
 	private String title;
 	private String description;
 }

@@ -10,19 +10,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
-public class ViewPostController
-{
+public class ViewPostController {
 	private final PostService postService;
 
 	@Autowired
-	public ViewPostController(PostService postService)
-	{
+	public ViewPostController(PostService postService) {
 		this.postService = postService;
 	}
 
-	@GetMapping ("/post/view/{id}")
-	public String view(Model model, @PathVariable Integer id)
-	{
+	@GetMapping("/post/view/{id}")
+	public String view(Model model, @PathVariable Integer id) {
 		Optional<Post> postOptional = postService.getPost(id);
 		postOptional.ifPresent(post -> model.addAttribute("post", post));
 		return "post/view";

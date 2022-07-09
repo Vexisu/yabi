@@ -9,23 +9,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-@Profile ("development")
+@Profile("development")
 @Configuration
-public class DevelopmentConfig
-{
+public class DevelopmentConfig {
 	private final PostRepository postRepository;
 	private final UserRepository userRepository;
 
 	@Autowired
-	public DevelopmentConfig(PostRepository postRepository, UserRepository userRepository)
-	{
+	public DevelopmentConfig(PostRepository postRepository, UserRepository userRepository) {
 		this.postRepository = postRepository;
 		this.userRepository = userRepository;
 	}
 
 	@Bean
-	public void addTestData()
-	{
+	public void addTestData() {
 		var user = new User();
 		user.setUsername("user");
 		user.setHashedPassword("qwertyuiop");
