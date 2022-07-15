@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "yabi.personalization.title",
+    "type": "java.lang.String",
+    "description": "A description for 'yabi.personalization.title'"
+  },
+  {
+    "name": "yabi.personalization.description",
+    "type": "java.lang.String",
+    "description": "A description for 'yabi.personalization.description'"
+  }
+]}

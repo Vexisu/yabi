@@ -1,13 +1,13 @@
 package dev.vexisu.yabi.config;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
 import dev.vexisu.yabi.impl.Post;
 import dev.vexisu.yabi.impl.User;
 import dev.vexisu.yabi.repository.PostRepository;
 import dev.vexisu.yabi.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 
 @Profile("development")
 @Configuration
@@ -15,7 +15,6 @@ public class DevelopmentConfig {
 	private final PostRepository postRepository;
 	private final UserRepository userRepository;
 
-	@Autowired
 	public DevelopmentConfig(PostRepository postRepository, UserRepository userRepository) {
 		this.postRepository = postRepository;
 		this.userRepository = userRepository;
