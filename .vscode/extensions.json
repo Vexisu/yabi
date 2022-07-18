@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "gabrielbb.vscode-lombok",
+        "richardwillis.vscode-gradle",
+        "vscjava.vscode-java-pack",
+        "Pivotal.vscode-boot-dev-pack"
+    ]
+}
