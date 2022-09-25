@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" th:href="@{/res/yaff/yaff.css}">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title th:text="${@personalizationProperties.getTitle()}"></title>
+		<title th:text='${@applicationPropertyService.getProperty("yabi.personalization.title")}'></title>
 	</head>
 	<body>
 		<main>
@@ -13,8 +13,8 @@
 				</div>
 				<div class="yaff segment">
 					<div class="yaff simple-article">
-						<!-- <h2 th:text="${@personalizationProperties.getTitle()}"></h2>
-						<h5 th:text="${@personalizationProperties.getDescription()}"></h5> -->
+						<h2 th:text='${@applicationPropertyService.getProperty("yabi.personalization.title")}'></h2>
+						<h5 th:text='${@applicationPropertyService.getProperty("yabi.personalization.motd")}'></h5>
 					</div>
 				</div>
 			</header>

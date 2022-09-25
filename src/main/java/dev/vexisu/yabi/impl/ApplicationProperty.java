@@ -13,5 +13,5 @@ public class ApplicationProperty {
     @Id
     @EqualsAndHashCode.Include
     private String name;
-    private String value;
+    private String property;
 }
