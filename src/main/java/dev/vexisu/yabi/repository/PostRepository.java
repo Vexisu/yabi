@@ -1,8 +1,8 @@
 package dev.vexisu.yabi.repository;
 
-import dev.vexisu.yabi.impl.Post;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PostRepository extends CrudRepository<Post, Integer> {
-	Post getById(Integer id);
+import dev.vexisu.yabi.impl.Post;
+
+public interface PostRepository extends JpaRepository<Post, Integer> {
 }

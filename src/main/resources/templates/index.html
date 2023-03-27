@@ -16,6 +16,9 @@
 						<h2 th:text='${@applicationPropertyService.getProperty("yabi.personalization.title")}'></h2>
 						<h5 th:text='${@applicationPropertyService.getProperty("yabi.personalization.motd")}'></h5>
 					</div>
+					<div class="yaff segment" th:each="post : ${posts}">
+						<article th:replace="fragment/postFragment :: post(${post})"></article>
+					</div>
 				</div>
 			</header>
 			<div class="yaff segment">

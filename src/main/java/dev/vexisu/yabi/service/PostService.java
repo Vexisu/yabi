@@ -2,6 +2,9 @@ package dev.vexisu.yabi.service;
 
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import dev.vexisu.yabi.impl.Post;
@@ -16,6 +19,10 @@ public class PostService {
 	}
 
 	public Optional<Post> getPost(Integer id) {
-		return Optional.of(postRepository.getById(id));
+		return Optional.of(postRepository.getReferenceById(id));
+	}
+
+	public Page<Post> getPostsPage(int page, int itemsAmount){
+		return postRepository.findAll(PageRequest.of(page, itemsAmount, Sort.by("creationDate").descending()));
 	}
 }
