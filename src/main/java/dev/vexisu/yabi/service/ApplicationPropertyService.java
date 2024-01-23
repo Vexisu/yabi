@@ -15,17 +15,20 @@ public class ApplicationPropertyService {
         this.applicationPropertyRepository = applicationPropertyRepository;
     }
 
-    public void saveIfNotExists(String name, String property)
-    {
-        if (!this.applicationPropertyRepository.existsById(name)){
-            var applicationProperty = new ApplicationProperty();
-            applicationProperty.setName(name);
-            applicationProperty.setProperty(property);
-            applicationPropertyRepository.save(applicationProperty);
+    public void saveIfNotExists(String name, String property) {
+        if (name == null) {
+            return;
         }
+        if (applicationPropertyRepository.existsById(name)) {
+            return;
+        }
+        var applicationProperty = new ApplicationProperty();
+        applicationProperty.setName(name);
+        applicationProperty.setProperty(property);
+        applicationPropertyRepository.save(applicationProperty);
     }
 
-    public String getProperty(String name){
+    public String getProperty(String name) {
         Optional<ApplicationProperty> propertyOptional = this.applicationPropertyRepository.findById(name);
         return propertyOptional.isPresent() ? propertyOptional.get().getProperty() : "null";
     }

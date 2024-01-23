@@ -1,11 +1,10 @@
 package dev.vexisu.yabi.init;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import dev.vexisu.yabi.service.ApplicationPropertyService;
+import jakarta.annotation.PostConstruct;
 
 @Component
 public class PropertiesInitializationBean {

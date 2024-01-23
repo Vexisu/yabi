@@ -19,7 +19,7 @@ public class PostService {
 	}
 
 	public Optional<Post> getPost(Integer id) {
-		return Optional.of(postRepository.getReferenceById(id));
+		return postRepository.findById(id);
 	}
 
 	public Page<Post> getPostsPage(int page, int itemsAmount){

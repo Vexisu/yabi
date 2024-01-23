@@ -19,7 +19,7 @@ public class ViewPostController {
 	}
 
 	@GetMapping("/post/view/{id}")
-	public String view(Model model, @PathVariable Integer id) {
+	public String view(Model model, @PathVariable(name = "id") Integer id) {
 		Optional<Post> postOptional = postService.getPost(id);
 		postOptional.ifPresent(post -> model.addAttribute("post", post));
 		return "post/view";
