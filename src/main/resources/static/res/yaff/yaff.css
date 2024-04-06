@@ -15,6 +15,7 @@
     --link-hover-color: #3b3b3b;
     --menu-bar-color: #e9e9e9;
     --article-border: #e0e0e0;
+    --input-border: #e0e0e0
 }
 
 * {
@@ -22,80 +23,80 @@
     color: var(--default-font-color);
     font-size: 11pt;
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 0
 }
 
 p {
-    margin: 8px 0;
+    margin: 8px 0
 }
 
 h1 {
-    font-size: 42pt;
+    font-size: 42pt
 }
 
 h2 {
-    font-size: 32pt;
+    font-size: 32pt
 }
 
 h3 {
-    font-size: 26pt;
+    font-size: 26pt
 }
 
 h4 {
-    font-size: 22pt;
+    font-size: 22pt
 }
 
 h5 {
-    font-size: 19pt;
+    font-size: 19pt
 }
 
 h6 {
-    font-size: 14pt;
+    font-size: 14pt
 }
 
 .yaff.button {
     display: inline-block;
-    margin: 0 2px;
+    margin: 4px;
     padding: 6px 14px;
     color: var(--button-text);
     background-color: var(--button-color);
     border: 1px solid var(--button-border);
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 .yaff.button:hover {
     background-color: var(--button-hover-color);
     border-color: var(--button-hover-border);
-    color: var(--button-hover-text);
+    color: var(--button-hover-text)
 }
 
 .yaff.simple-button {
     display: inline-block;
-    margin: 2px;
+    margin: 4px;
     padding: 6px 14px;
     color: var(--simple-button-text);
     border-radius: 4px;
-    text-decoration: none;
+    text-decoration: none
 }
 
 .yaff.simple-button:hover {
     background-color: var(--simple-button-hover-color);
-    color: var(--simple-button-hover-text);
+    color: var(--simple-button-hover-text)
 }
 
 .yaff.link {
     color: var(--link-color);
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 .yaff.link:hover {
-    color: var(--link-hover-color);
+    color: var(--link-hover-color)
 }
 
 .yaff.article {
@@ -104,14 +105,14 @@ h6 {
     border: 1px solid var(--article-border);
     border-radius: 8px;
     width: 1280px;
-    text-align: left;
+    text-align: left
 }
 
 .yaff.simple-article {
     width: 1280px;
     margin: 16px;
     padding: 16px;
-    text-align: left;
+    text-align: left
 }
 
 .yaff.menu-bar {
@@ -120,49 +121,60 @@ h6 {
     display: flex;
     align-items: center;
     width: calc(100% - 24px);
-    background-color: var(--menu-bar-color);
+    background-color: var(--menu-bar-color)
+}
+
+.yaff.input {
+    margin: 4px;
+    padding: 6px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px
+}
+
+.yaff.label {
+    margin: 4px
 }
 
 .yaff.segment {
     text-align: center;
-    min-width: 100%;
+    min-width: 100%
 }
 
-.yaff.segment > * {
+.yaff.segment>* {
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto
 }
 
 .yaff.marginless {
-    margin: 0;
+    margin: 0
 }
 
 @media screen and (max-width: 1340px) {
     .yaff.article {
-        width: 1024px;
+        width: 1024px
     }
 
     .yaff.simple-article {
-        width: 1024px;
+        width: 1024px
     }
 }
 
 @media screen and (max-width: 1084px) {
     .yaff.article {
-        width: 768px;
+        width: 768px
     }
 
     .yaff.simple-article {
-        width: 768px;
+        width: 768px
     }
 }
 
 @media screen and (max-width: 828px) {
     .yaff.article {
-        width: 90%;
+        width: 90%
     }
 
     .yaff.simple-article {
-        width: 90%;
+        width: 90%
     }
 }
