@@ -32,7 +32,6 @@ public class DevelopmentConfig {
 		user.setHashedPassword(passwordEncoder.encode("qwertyuiop"));
 		userRepository.save(user);
 		var post = new Post();
-		post.setId(1);
 		post.setTitle("Test post");
 		post.setContent("This is a test post.");
 		post.setAuthor(user);
