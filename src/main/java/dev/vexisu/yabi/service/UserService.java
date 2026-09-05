@@ -8,14 +8,12 @@ import org.springframework.stereotype.Service;
 import dev.vexisu.yabi.impl.User;
 import dev.vexisu.yabi.impl.UserPrincipal;
 import dev.vexisu.yabi.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class UserService implements UserDetailsService {
-    private UserRepository userRepository;
-
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+    private final UserRepository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

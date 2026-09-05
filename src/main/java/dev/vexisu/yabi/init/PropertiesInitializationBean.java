@@ -5,18 +5,16 @@ import org.springframework.transaction.annotation.Transactional;
 
 import dev.vexisu.yabi.service.ApplicationPropertyService;
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
 
 @Component
+@RequiredArgsConstructor
 public class PropertiesInitializationBean {
     private static final String[][] PROPERTIES = {
             { "yabi.personalization.title", "My fresh blog" },
             { "yabi.personalization.motd", "Powered by Yabi." }
     };
-    private ApplicationPropertyService applicationPropertyService;
-
-    public PropertiesInitializationBean(ApplicationPropertyService applicationPropertyService) {
-        this.applicationPropertyService = applicationPropertyService;
-    }
+    private final ApplicationPropertyService applicationPropertyService;
 
     @PostConstruct
     @Transactional

@@ -6,14 +6,12 @@ import org.springframework.stereotype.Service;
 
 import dev.vexisu.yabi.impl.ApplicationProperty;
 import dev.vexisu.yabi.repository.ApplicationPropertyRepository;
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class ApplicationPropertyService {
-    private ApplicationPropertyRepository applicationPropertyRepository;
-
-    public ApplicationPropertyService(ApplicationPropertyRepository applicationPropertyRepository) {
-        this.applicationPropertyRepository = applicationPropertyRepository;
-    }
+    private final ApplicationPropertyRepository applicationPropertyRepository;
 
     public void saveIfNotExists(String name, String property) {
         if (name == null) {

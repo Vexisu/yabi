@@ -9,14 +9,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import dev.vexisu.yabi.impl.Post;
 import dev.vexisu.yabi.service.PostService;
+import lombok.RequiredArgsConstructor;
 
 @Controller
+@RequiredArgsConstructor
 public class ViewPostController {
 	private final PostService postService;
-
-	public ViewPostController(PostService postService) {
-		this.postService = postService;
-	}
 
 	@GetMapping("/post/view/{id}")
 	public String view(Model model, @PathVariable(name = "id") Integer id) {
