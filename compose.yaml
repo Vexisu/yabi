@@ -1,0 +1,9 @@
+services:
+  database:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: yabi
+      POSTGRES_PASSWORD: yabi
+      POSTGRES_DB: yabi
+    ports:
+      - "5432:5432"

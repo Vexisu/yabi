@@ -1,11 +1,7 @@
 spring:
-  datasource:
-    url: jdbc:h2:mem:yabi
-    username: sa
-    password: password
-    driverClassName: org.h2.Driver
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-  h2:
-    console:
-      enabled: true
+    hibernate:
+      ddl-auto: update
+  docker:
+    compose:
+      lifecycle-management: start-and-stop

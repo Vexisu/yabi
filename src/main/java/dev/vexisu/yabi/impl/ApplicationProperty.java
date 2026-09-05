@@ -8,7 +8,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@Table(name = "blog_property")
+@Table(name = "yabi_property")
 @Entity
 public class ApplicationProperty {
     @Id

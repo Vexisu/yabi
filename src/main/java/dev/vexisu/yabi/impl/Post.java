@@ -13,7 +13,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@Table(name = "blog_post")
+@Table(name = "yabi_post")
 @Entity
 public class Post {
 	@Id
