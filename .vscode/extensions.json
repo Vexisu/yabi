@@ -1,8 +1,7 @@
 {
     "recommendations": [
-        "gabrielbb.vscode-lombok",
-        "richardwillis.vscode-gradle",
         "vscjava.vscode-java-pack",
-        "Pivotal.vscode-boot-dev-pack"
+        "vmware.vscode-boot-dev-pack",
+        "lalithk90.thymeleaf-html5-snippets"
     ]
 }
