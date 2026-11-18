@@ -1,11 +1,9 @@
-package dev.vexisu.yabi.service;
+package dev.vexisu.yabi.property;
 
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-import dev.vexisu.yabi.impl.ApplicationProperty;
-import dev.vexisu.yabi.repository.ApplicationPropertyRepository;
 import lombok.RequiredArgsConstructor;
 
 @Service

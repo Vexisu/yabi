@@ -1,4 +1,4 @@
-package dev.vexisu.yabi.config;
+package dev.vexisu.yabi.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

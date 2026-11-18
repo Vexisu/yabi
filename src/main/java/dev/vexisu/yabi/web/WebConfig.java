@@ -1,4 +1,4 @@
-package dev.vexisu.yabi.config;
+package dev.vexisu.yabi.web;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;

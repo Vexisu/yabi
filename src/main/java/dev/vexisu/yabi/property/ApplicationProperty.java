@@ -1,4 +1,4 @@
-package dev.vexisu.yabi.impl;
+package dev.vexisu.yabi.property;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -12,7 +12,7 @@ import lombok.EqualsAndHashCode;
 @Entity
 public class ApplicationProperty {
     @Id
-    @EqualsAndHashCode.Include
     private String name;
+
     private String property;
 }

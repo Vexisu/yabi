@@ -1,4 +1,4 @@
-package dev.vexisu.yabi.controller;
+package dev.vexisu.yabi.security;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

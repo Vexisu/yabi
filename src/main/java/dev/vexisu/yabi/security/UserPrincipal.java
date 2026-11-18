@@ -1,4 +1,4 @@
-package dev.vexisu.yabi.impl;
+package dev.vexisu.yabi.security;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -6,6 +6,8 @@ import java.util.Collection;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import dev.vexisu.yabi.user.User;
 
 public class UserPrincipal implements UserDetails {
     private User user;

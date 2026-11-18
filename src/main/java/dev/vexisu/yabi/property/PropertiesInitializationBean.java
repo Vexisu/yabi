@@ -1,9 +1,8 @@
-package dev.vexisu.yabi.init;
+package dev.vexisu.yabi.property;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import dev.vexisu.yabi.service.ApplicationPropertyService;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 

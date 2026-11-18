@@ -1,13 +1,11 @@
-package dev.vexisu.yabi.service;
+package dev.vexisu.yabi.user;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import dev.vexisu.yabi.impl.User;
-import dev.vexisu.yabi.impl.UserPrincipal;
-import dev.vexisu.yabi.repository.UserRepository;
+import dev.vexisu.yabi.security.UserPrincipal;
 import lombok.RequiredArgsConstructor;
 
 @Service
